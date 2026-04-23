@@ -4,7 +4,7 @@ import json
 from datetime import date
 from pathlib import Path
 
-from src.todo_utils import Task, TaskManager
+from todo_utils import Task, TaskManager
 
 
 def task_to_dict(task: Task) -> dict[str, object]:
