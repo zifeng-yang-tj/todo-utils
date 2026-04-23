@@ -2,12 +2,13 @@
 
 import json
 from datetime import date
+from pathlib import Path
 
 from storage import save_tasks
 from todo_utils import TaskManager
 
 
-def test_save_tasks(tmp_path) -> None:
+def test_save_tasks(tmp_path: Path) -> None:
     """Test saving tasks to a JSON file."""
     manager = TaskManager()
     manager.add_task(
@@ -29,7 +30,7 @@ def test_save_tasks(tmp_path) -> None:
     assert file_path.exists()
 
 
-def test_save_tasks_content(tmp_path) -> None:
+def test_save_tasks_content(tmp_path: Path) -> None:
     """Test the content of the saved JSON file."""
     manager = TaskManager()
     manager.add_task(

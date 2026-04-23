@@ -1,12 +1,13 @@
 """Test for load_tasks."""
 
 from datetime import date
+from pathlib import Path
 
 from storage import load_tasks, save_tasks
 from todo_utils import TaskManager
 
 
-def test_load_tasks(tmp_path) -> None:
+def test_load_tasks(tmp_path: Path) -> None:
     """Test loading tasks from a JSON file."""
     manager = TaskManager()
     manager.add_task(
@@ -29,7 +30,7 @@ def test_load_tasks(tmp_path) -> None:
     assert loaded_manager.tasks == manager.tasks
 
 
-def test_load_tasks_missing_file(tmp_path) -> None:
+def test_load_tasks_missing_file(tmp_path: Path) -> None:
     """Test loading tasks from a non-existent file."""
     file_path = tmp_path / "non_existent.json"
     loaded_manager = load_tasks(file_path)
