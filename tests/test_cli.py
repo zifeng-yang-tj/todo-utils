@@ -55,6 +55,8 @@ def test_complete_and_filter(capsys: pytest.CaptureFixture[str]) -> None:
         result = run_cli(["complete", "1"], store_path)
         assert result == 0
 
+        capsys.readouterr()  # clear previous output
+
         result = run_cli(
             ["list", "--status", "completed"],
             store_path=store_path,
