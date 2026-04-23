@@ -25,7 +25,7 @@ def dict_to_task(data: dict[str, object]) -> Task:
         due_date = date.fromisoformat(str(data["due_date"]))
 
     return Task(
-        id=int(data["id"]),
+        id=int(str(data["id"])),
         title=str(data["title"]),
         priority=str(data["priority"]),
         due_date=due_date,
@@ -41,6 +41,7 @@ def save_tasks(manager: TaskManager, file_path: Path) -> None:
     for task in manager.tasks.values():
         task_dict = task_to_dict(task)
         tasks_dicts.append(task_dict)
+
     with path.open("w", encoding="utf-8") as f:
         json.dump(tasks_dicts, f, indent=2)
 
