@@ -96,3 +96,27 @@ coverage report -m
   - saves updated state to JSON
 - `tests/`: automated tests for manager logic and CLI behavior
 - `.github/workflows/`: CI for lint/type checks, tests, and coverage reporting
+
+## Generative AI Usage-ChatGPT
+
+### How We Used These Tools
+We used generative AI tools to support software development for this project. The tools were used for:
+- help break the project into main tasks and assign tasks to members
+- brainstorming project structure and feature scope
+- explaining Python syntax and test design
+- suggesting test cases for core functions
+- helping debug import, typing, and formatting issues
+- improving README and documentation wording
+
+### What the Tools Produced
+The tools produced:
+- draft unit tests for storage-related functions
+- explanations of existing code and test logic
+- suggested Git branching and PR workflow fixes
+- draft text for project documentation 
+
+## Team Contributions
+
+- **Member A** implemented the core business logic, including the `Task` and `TaskManager` classes and their main methods.
+- **Member B** implemented the JSON storage layer and wrote unit tests for storage and task manager functions.
+- **Member C** worked on the CLI interface, README/documentation, and repository workflow setup.
