@@ -5,6 +5,11 @@ Todo Utils is a lightweight Python project for managing a to-do list with:
 - a JSON persistence layer
 - a command-line interface (CLI)
 
+**Author**:
+- **Zifeng Yang** (zifeng-yang-tj)
+- **Ran Ji** (Ran0810)
+- **Sicheng Shu** (PEARROAR)
+
 ## Installation
 
 1. Clone the repository.
@@ -117,6 +122,8 @@ The tools produced:
 
 ## Team Contributions
 
-- **Member A** implemented the core business logic, including the `Task` and `TaskManager` classes and their main methods.
-- **Member B** implemented the JSON storage layer and wrote unit tests for storage and task manager functions.
-- **Member C** worked on the CLI interface, README/documentation, and repository workflow setup.
+- **Zifeng Yang** implemented the core business logic, including the `Task` and `TaskManager` classes and their main methods, and set up the initial GitHub repository.
+- **Ran Ji** implemented the JSON storage layer and wrote unit tests for storage and task manager functions.
+- **Sicheng Shu** worked on the CLI interface, README/documentation, and contributed additional tests for CLI-related behaviors.
+
+**Note:** In practice, to improve efficiency, team members did not strictly limit themselves to their assigned responsibilities. Some tasks were completed collaboratively, and members occasionally assisted with work outside their primary roles.
