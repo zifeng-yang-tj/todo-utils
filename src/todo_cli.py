@@ -21,10 +21,10 @@ def parse_due_date(value: str) -> date:
 
 def format_task(task: Task) -> str:
     """Return a printable line for a task."""
-    state = "done" if task.completed else "todo"
+    state = str(task.completed)
     due = task.due_date.isoformat() if task.due_date is not None else "-"
     return (
-        f"{task.id:>3} | {state:<4} | {task.priority:<6} | "
+        f"{task.id:>3} | {state:<9} | {task.priority:<6} | "
         f"{due:<10} | {task.title}"
     )
 
@@ -103,8 +103,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         if not tasks:
             print("No tasks found.")
             return 0
-        print(" ID | State | Priority | Due Date   | Title")
-        print("----+-------+----------+------------+----------------")
+        print(" ID | Completed | Priority | Due Date   | Title")
+        print("----+-----------+----------+------------+----------------")
         for task in tasks:
             print(format_task(task))
         return 0

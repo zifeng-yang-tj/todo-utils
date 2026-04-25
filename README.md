@@ -49,6 +49,15 @@ python src/todo_cli.py add "Pay rent" --priority medium --due-date 2026-05-01
 python src/todo_cli.py list
 ```
 
+Example output:
+
+```text
+ ID | Completed | Priority | Due Date   | Title
+----+-----------+----------+------------+----------------
+  1 | False     | high     | -          | Buy groceries
+  2 | True      | medium   | 2026-05-01 | Pay rent
+```
+
 ### Complete a task
 
 ```bash
